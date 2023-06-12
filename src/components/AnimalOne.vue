@@ -1,9 +1,13 @@
 <script>
 export default {
-  props: ['animals'],
-  data () {
-    return {
-
+  computed: {
+    animals() {
+      return this.$store.getters.animals;
+    }
+  },
+  methods : {
+    reduceQty: function () {
+      this.$store.commit('reduceQty')
     }
   }
 }
@@ -18,6 +22,7 @@ export default {
         {{ animal.qty }}
         </li>
     </ul>
+    <button @click="reduceQty">Reduce</button>
   </div>
 </template>
 

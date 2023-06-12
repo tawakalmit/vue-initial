@@ -1,9 +1,8 @@
 <script>
 export default {
-  props: ['animals'],
-  data () {
-    return {
-
+  computed: {
+    animals() {
+      return this.$store.getters.animals
     }
   }
 }
