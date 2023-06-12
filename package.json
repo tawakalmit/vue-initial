@@ -9,13 +9,16 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@vue/babel-preset-app": "^5.0.8",
     "vue": "^3.3.2",
     "vue-router": "^4.2.0",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
+    "babel-preset-stage-2": "^6.24.1",
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
     "postcss": "^8.4.24",

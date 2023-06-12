@@ -1,10 +1,20 @@
 <script>
-export default {
-  props: ['animals'],
-  data () {
-    return {
+import { mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 
-    }
+export default {
+  computed: {
+    animals() {
+      return this.$store.getters.animals;
+    },
+    ...mapGetters([
+      'animals'
+    ])
+  },
+  methods : {
+    ...mapActions([
+      'reduceQty'
+    ])
   }
 }
 </script>
@@ -18,6 +28,7 @@ export default {
         {{ animal.qty }}
         </li>
     </ul>
+    <button @click="reduceQty(4)">Reduce</button>
   </div>
 </template>
 

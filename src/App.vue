@@ -10,18 +10,13 @@ export default {
   },
   data () {
     return {
-      animals: [
-        {name: 'kambing', qty: 20},
-        {name: 'ayam', qty: 69},
-        {name: 'kelinci', qty: 14},
-        {name: 'sapi', qty: 3},
-      ]
+      
     }
   }
 }
 </script>
 
 <template>
-  <animal-list-one v-bind:animals="animals"></animal-list-one>
-  <animal-list-two v-bind:animals="animals"></animal-list-two>
+  <animal-list-one></animal-list-one>
+  <animal-list-two></animal-list-two>
 </template>
