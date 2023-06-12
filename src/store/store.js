@@ -15,10 +15,15 @@ export default createStore({
         }
     },
     mutations: {
-        reduceQty : state => {
+        reduceQty : (state, payload) => {
             state.animals.forEach(item => {
-                item.qty = item.qty-1
+                item.qty = item.qty-payload
             })
+        }
+    },
+    actions: {
+        reduceQty: (context, payload) => {
+            context.commit('reduceQty', payload)
         }
     }
 })

@@ -6,8 +6,8 @@ export default {
     }
   },
   methods : {
-    reduceQty: function () {
-      this.$store.commit('reduceQty')
+    reduceQty: function (amount) {
+      this.$store.dispatch('reduceQty', amount)
     }
   }
 }
@@ -22,7 +22,7 @@ export default {
         {{ animal.qty }}
         </li>
     </ul>
-    <button @click="reduceQty">Reduce</button>
+    <button @click="reduceQty(4)">Reduce</button>
   </div>
 </template>
 
