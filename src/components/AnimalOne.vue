@@ -1,14 +1,20 @@
 <script>
+import { mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
+
 export default {
   computed: {
     animals() {
       return this.$store.getters.animals;
-    }
+    },
+    ...mapGetters([
+      'animals'
+    ])
   },
   methods : {
-    reduceQty: function (amount) {
-      this.$store.dispatch('reduceQty', amount)
-    }
+    ...mapActions([
+      'reduceQty'
+    ])
   }
 }
 </script>
